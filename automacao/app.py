@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from scripts.configurar_vlan import aplicar_vlan
 from scripts.configurar_hostname import aplicar_hostname
 from scripts.salvar_config import wr_config 
+from scripts.backup_config import bkp_config
 
 app = Flask(__name__, template_folder='interface')
 
@@ -29,6 +30,11 @@ def configurar_hostname():
 @app.route('/salvar')
 def salvar_config():
     resultado = wr_config()
+    return resultado
+
+@app.route('/backup')
+def backup_config(): 
+    resultado = bkp_config()
     return resultado
 
 if __name__ == '__main__':
