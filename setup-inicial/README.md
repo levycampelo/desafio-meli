@@ -27,4 +27,5 @@ username levy privilege 15 secret d3s@f10-m3li
 line vty 0 15
 transport input ssh
 login local
+exit
 ```
