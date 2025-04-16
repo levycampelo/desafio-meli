@@ -30,7 +30,3 @@ Flask 3.0.3
 Werkzeug 3.0.6
 ```
 
-Interação via SSH:
-```bash
-pip install netmiko
-```
