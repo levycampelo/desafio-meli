@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from scripts.configurar_vlan import aplicar_vlan
 
 app = Flask(__name__, template_folder='interface')
 
@@ -6,8 +7,13 @@ app = Flask(__name__, template_folder='interface')
 def index():
     return render_template('index.html')
 
-@app.route('/vlan')
+@app.route('/vlan', methods=['GET', 'POST'])
 def configurar_vlan():
+    if request.method == 'POST':
+        id_vlan = request.form['id_vlan']
+        nome_vlan = request.form['nome_vlan'].upper()
+        resultado = aplicar_vlan(id_vlan, nome_vlan)
+        return f"<h3>{resultado}</h3><br><a href='/'>Voltar</a>"
     return render_template('vlan.html')
 
 @app.route('/hostname')
