@@ -30,10 +30,10 @@ def bkp_config():
         conn.disconnect()
 
         return f"""
-        <h3>Backup realizado com sucesso!</h3>
+        <h3>Backup realizado!</h3>
         <p>Arquivo salvo em: <code>{filename}</code></p>
         """
 
     except Exception as e:
-        return f"<h3>Erro ao tentar salvar as configurações:</h3><pre>{str(e)}</pre>"
+        return f"<h3>Erro:</h3><pre>{str(e)}</pre>"
 
