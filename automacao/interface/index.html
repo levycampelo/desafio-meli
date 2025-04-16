@@ -39,13 +39,18 @@
 </head>
 <body>
     <h1>Bem-vindo ao Painel de Automação</h1>
-    <p>Opções abaixo:</p>
+    <br>
+    <!-- <p>Opções abaixo:</p> --!>
 
     <div class="button-container">
     <a href="{{ url_for('configurar_vlan') }}" class="btn">Configurar VLAN</a>
     <a href="{{ url_for('configurar_hostname') }}" class="btn">Configurar Hostname</a>
     <a href="{{ url_for('salvar_config') }}" class="btn">Salvar as alterações</a>
 </div>
+<br>
+    <div class="button-container">
+    <a href="{{ url_for('backup_config') }}" class="btn">Backup das configurações</a>
+</div>	    
 </body>
 </html>
 
