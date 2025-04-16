@@ -4,13 +4,9 @@ O desafio foi construído no meu ambiente local utilizando o Proxmox. Para isso,
 
 O **EVE-NG CE (Community Edition)** é uma plataforma gratuita de emulação de redes, baseada em Linux, utilizada para criar laboratórios virtuais com equipamentos de rede, como roteadores, switches, firewalls, servidores e outros dispositivos.
 
----
-
 ## Setup Inicial
 
 A seguir, os passos para configuração básica de acesso entre o ambiente virtual e a internet:
-
-### Topologia Básica
 
 #### Configurando IP de Acesso
 
