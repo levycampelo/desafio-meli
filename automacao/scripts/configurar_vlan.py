@@ -3,9 +3,9 @@ from netmiko import ConnectHandler
 def aplicar_vlan(id_vlan, nome_vlan):
     device = {
         'device_type': 'cisco_ios', 
-        'ip': '192.168.68.11',
+        'ip': '192.168.68.55',
         'username': 'levy',
-        'password': 'levy',
+        'password': 'd3s@f10-m3li',
     }
 
     try:
