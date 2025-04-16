@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Automação Switch</title>
+    <script>
+        function toUpperCase(input) {
+            input.value = input.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    <h1>Configurar VLAN</h1>
+    <form method="POST">
+        <label for="id_vlan">VLAN:</label>
+        <select id="id_vlan" name="id_vlan">
+            {% for id_vlan in range(10, 51, 10) %}
+                <option value="{{ id_vlan }}">{{ id_vlan }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="nome_vlan">Nome da VLAN:</label>
+        <input type="text" id="nome_vlan" name="nome_vlan" oninput="toUpperCase(this)" required><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

@@ -1,17 +1,19 @@
-from flask import Flask, render_template, request
-import os
+from flask import Flask, render_template
 
 app = Flask(__name__, template_folder='interface')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
-    if request.method == 'POST':
-        vlan = request.form.get('vlan')
-        hostname = request.form.get('hostname')
-        return f"VLAN: {vlan}, Hostname: {hostname}"
-    
     return render_template('index.html')
 
+@app.route('/vlan')
+def configurar_vlan():
+    return render_template('vlan.html')
+
+@app.route('/hostname')
+def configurar_hostname():
+    return render_template('hostname.html')
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0')
 

@@ -2,19 +2,49 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Configuração de Rede</title>
+    <title>Painel de Automamação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Configurar Dispositivo</h1>
-    <form method="POST">
-        <label for="vlan">VLAN:</label>
-        <input type="text" id="vlan" name="vlan" required><br><br>
+    <h1>Bem-vindo ao Painel de Automação</h1>
+    <p>Opções abaixo:</p>
 
-        <label for="hostname">Hostname:</label>
-        <input type="text" id="hostname" name="hostname" required><br><br>
-
-        <input type="submit" value="Enviar">
-    </form>
+    <div class="button-container">
+    <a href="{{ url_for('configurar_vlan') }}" class="btn">Configurar VLAN</a>
+    <a href="{{ url_for('configurar_hostname') }}" class="btn">Configurar Hostname</a>
+</div>
 </body>
 </html>
 

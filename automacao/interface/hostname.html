@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Automação Switch</title>
+    <script>
+        function toUpperCase(input) {
+            input.value = input.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    <h1>Configurar HOSTNAME</h1>
+    <form method="POST">
+        <label for="hostname">HOSTNAME:</label>
+        <input type="text" id="hostname" name="hostname" oninput="toUpperCase(this)" required><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
