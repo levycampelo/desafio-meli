@@ -29,4 +29,7 @@ Python 3.8.10
 Flask 3.0.3
 Werkzeug 3.0.6
 ```
-
+Backup do switch da automação está no servidor que roda a interface grafica:
+```bash
+192.168.68.108:/tmp
+```
