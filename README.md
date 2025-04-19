@@ -13,3 +13,12 @@ A lógica de backend será implementada em Python, utilizando o framework Flask,
 Todo o código será versionado em um repositório público no GitHub, com histórico de commits documentados para facilitar o acompanhamento técnico e eventuais revisões.
 
 ![telaprincipal](/images/tela01.png)
+![configurarvlan](/images/tela02.png)
+![resultadoconfigvlan](/images/tela03.png)
+![configurarhostname](/images/tela04.png)
+![resultadoconfighostname](/images/tela05.png)
+![validacaoconfig](/images/tela06.png)
+![jsondavalidacao](/images/tela07.png)
+![backup](/images/tela08.png)
+![pathbackup](/images/tela09.png)
+
