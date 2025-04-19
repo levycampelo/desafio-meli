@@ -20,7 +20,7 @@ exit
 ip route 0.0.0.0 0.0.0.0 192.168.68.1
 
 ip domain-name desafiomeli
-crypto key generate rsa
+crypto key generate rsa modulus 768
 
 username levy privilege 15 secret d3s@f10-m3li
 
