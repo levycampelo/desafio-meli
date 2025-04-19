@@ -1,4 +1,4 @@
-### Plano para automação da configuração de uma VPN com IPSEC entre dispositivos Fortigate e um firewall Palo Alto. Principais topicos:
+### Plano para automação de uma VPN com IPSEC entre FW Fortigate e Palo Alto. Topicos principais:
 
 - Definição de parametros:
 - Identificação de Ferramentas/API:
@@ -34,9 +34,10 @@ Protocol
 
 #### Mapear ferramentas/APIs:
 
-|Dispositivo|Interfaces | Ferramentas | 
-|FortiGate  | API REST, SSH/CLI | request, paramiko |
-|Palo Alto  | API REST, SSH/CLI | paramiko, ansible, terraform |
+| Dispositivo | Interfaces | Ferramentas | 
+| ----------- | ---------- | ----------- |
+| FortiGate   | API REST, SSH/CLI | request, paramiko |
+| Palo Alto   | API REST, SSH/CLI | paramiko, ansible, terraform |
 
 Possibilidade de gerenciamento centralizado:
 
