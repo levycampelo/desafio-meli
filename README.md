@@ -12,3 +12,4 @@ A lógica de backend será implementada em Python, utilizando o framework Flask,
 
 Todo o código será versionado em um repositório público no GitHub, com histórico de commits documentados para facilitar o acompanhamento técnico e eventuais revisões.
 
+![telaprincipal](/desafio-meli/images/tela01.png)
