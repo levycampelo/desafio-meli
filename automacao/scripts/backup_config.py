@@ -22,7 +22,7 @@ def bkp_config():
         output = conn.send_command("show running-config")
 
         now = datetime.now().strftime("%Y%m%d-%H%M%S")
-        filename = f"/tmp/backup/{hostname}_{now}.txt"
+        filename = f"/home/levycampelo/desafio-meli/automacao/backup/{hostname}_{now}.txt"
 
         with open(filename, "w") as f:
             f.write(output)
