@@ -5,7 +5,8 @@ Este projeto consiste em um desafio técnico focado em automação de configura�
 - Configurar VLANs;
 - Alterar o HOSTNAME do dispositivo;
 - Aplicar e salvar as configurações;
-- Realizar o backup completo do elemento de rede.
+- Realizar o backup completo do elemento de rede;
+- Validação das configurações através de um arquivo JSON.
 
 A lógica de backend será implementada em Python, utilizando o framework Flask, que atuará como uma simples interface gráfica paras operações de automação. O objetivo é garantir uma estrutura leve, e fácil manutenção.
 
