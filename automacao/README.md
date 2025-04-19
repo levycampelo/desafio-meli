@@ -31,5 +31,9 @@ Werkzeug 3.0.6
 ```
 Backup do switch da automação está no servidor que roda a interface grafica:
 ```bash
-192.168.68.108:/tmp
+192.168.68.108
+/home/levycampelo/desafio-meli/automacao/backup
 ```
+Para executar:
+```bash
+python3 /automacao/app.py
