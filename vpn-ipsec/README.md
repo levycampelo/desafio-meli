@@ -9,30 +9,36 @@
 Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Internet Protocol Security) para criar um túnel seguro entre dois dispositivos ou redes. O IPsec fornece criptografia e autenticação, garantindo que as comunicações entre os dispositivos sejam protegidas e não possam ser interceptadas. 
 
 ### Levantamento dos parâmetros da VPN:
-Endereços das WAN dos elementos:
-FortiGate:
-Palo Alto:
 
-Redes Locais que vão se comunicar:
-FortiGate:
-Palo Alto:
+| Endereços WAN dos FW | IP-ADDRESS | 
+| -------------------- | ---------- |
+| FortiGate            | xxx        |
+| Palo Alto            | xxx        |
 
-Rede do Túnel IPSEC:
-FortiGate
-Palo Alto
+| Redes Locais | IP-ADDRESS |
+| ------------ | ---------- |
+| FortiGate    | xxxx       |
+| Palo Alto    | xxxx       |
 
-Proposta Fase 1:
-Criptografia
-Autenticacao
-Lifetime
+| Túnel IPSEC | IP |
+| ----------- | -- |
+| FortiGate | xxx |
+| Palo Alto | xxx |
 
-Proposta Fase 2
-Criptografia
-Autenticacao
-Lifetime
-Protocol
+| Proposta Fase 1 | Security |
+| --------------- | -------- | 
+| Criptografia    |          |
+| Autenticacao    |          |
+| Lifetime        |          |
 
-#### Mapear ferramentas/APIs:
+| Proposta Fase 2 | Security | 
+| --------------- | -------- |
+| Criptografia      |        |
+| Autenticacao      |        |
+| Lifetime          |        |
+| Protocol          |        |
+
+### Ferramentas/APIs:
 
 | Dispositivo | Interfaces | Ferramentas | 
 | ----------- | ---------- | ----------- |
