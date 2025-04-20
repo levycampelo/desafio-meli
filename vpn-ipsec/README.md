@@ -1,5 +1,5 @@
 ### Levantamento de requisitos para automação de uma VPN com IPSEC entre FW Fortigate e Palo Alto. 
-Topicos principais:
+Tópicos principais:
 
 - Definição de parametros:
 - Identificação de Ferramentas/API:
@@ -7,14 +7,14 @@ Topicos principais:
 - Considerações/Validações:
 
 ### Definição VPN com IPSEC:
-Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Internet Protocol Security) para criar um túnel seguro entre dois dispositivos ou redes. O IPsec fornece criptografia e autenticação, garantindo que as comunicações entre os dispositivos sejam protegidas e não possam ser interceptadas. 
+Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Internet Protocol Security) para criar um túnel seguros entre dois dispositivos ou uma rede. O IPsec fornece criptografia e autenticação, garantindo que as comunicações entre os dispositivos sejam protegidas e não possam ser interceptadas. 
 
 ### Levantamento dos parâmetros da VPN:
 
 | Endereços WAN dos FW | IP-ADDRESS | 
 | -------------------- | ---------- |
 | FortiGate            | 200.210.199.1/30        |
-| Palo Alto            | 189.212.0.1./30        |
+| Palo Alto            | 189.212.0.1/30        |
 
 | Redes Locais | IP-ADDRESS |
 | ------------ | ---------- |
@@ -61,7 +61,13 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 - Mapear a necessidade de criar politicas para liberar e negar trafego entre as redes;
 - Mapear a necessidade de roteamento estático ou dinamico entre as redes de diferentes regiões via tunel;
 
-- Criar rotina de validações (ping, tunnel status e logs);
+- Criar rotina de validações (ping, tunnel status e logs) via check do zabbix;
+> Validar o status ike-sa e ipsec-sa
 - Criar dashboard para monitoramento de latencia, status do tunel e logs.
+
+### Check após configurações:
+
+FortiGate = get vpn ipsec tunnel, diagnose vpn tunnel
+PaloAlto = show vpn ike-sa, show vpn ipsec-sa
 
 
