@@ -1,6 +1,6 @@
 # Interface Tunnel
 config system interface
-    edit "VPN-PALO"
+    edit "VPN-PALO-ALTO"
         set ip 169.255.1.1 255.255.255.252
         set type tunnel
         set remote-ip 169.255.1.2
@@ -10,7 +10,7 @@ end
 
 # IKE
 config vpn ipsec phase1-interface
-    edit "VPN-PALO-P1"
+    edit "VPN-PALO-ALTO-P1"
         set interface "wan1"
         set ike-version 2
         set peertype any
@@ -18,30 +18,30 @@ config vpn ipsec phase1-interface
         set proposal aes256-sha256
         set dhgrp 14
         set lifetime 28800
-        set remote-gw 200.0.0.2
-        set psksecret "SENHA-SEGURA"
+        set remote-gw 189.212.0.2
+        set psksecret "D3S@FIO-M3RC@D0L1BR3"
     next
 end
 
 # IPsec
 config vpn ipsec phase2-interface
-    edit "VPN-PALO-P2"
-        set phase1name "VPN-PALO-P1"
+    edit "VPN-PALO-ALTO-P2"
+        set phase1name "VPN-PALO-ALTO-P1"
         set proposal aes256-sha256
         set pfs enable
         set dhgrp 14
         set lifetime 3600
-        set src-subnet 192.168.10.0 255.255.255.0
-        set dst-subnet 192.168.20.0 255.255.255.0
+        set src-subnet 192.168.100.0 255.255.255.192
+        set dst-subnet 172.16.0.0 255.255.255.224
     next
 end
 
-# Política de Segurança
+# Politica
 config firewall policy
     edit 10
-        set name "VPN-TO-PALO"
+        set name "VPN-TO-PALO-ALTO"
         set srcintf "lan"
-        set dstintf "VPN-PALO"
+        set dstintf "VPN-PALO-ALTO"
         set srcaddr "all"
         set dstaddr "all"
         set action accept
@@ -54,8 +54,8 @@ end
 # Rota via túnel
 config router static
     edit 1
-        set dst 192.168.20.0/24
-        set device "VPN-PALO"
+        set dst 172.16.0.0/27
+        set device "VPN-PALO-ALTO"
         set gateway 169.255.1.2
     next
 end
