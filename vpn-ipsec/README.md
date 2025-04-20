@@ -41,6 +41,9 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 | DH Group          |    14      |
 | Protocol          |   ESP     |
 
+Estudar a possibilidade de implementar Criptografia SHA384 e DH group 19 para aumentar a segurança.
+
+
 ### Ferramentas/APIs:
 
 | Dispositivo | Interfaces | Ferramentas | 
