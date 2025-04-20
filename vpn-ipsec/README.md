@@ -21,8 +21,8 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 | FortiGate    | 192.168.100.1/26       |
 | Palo Alto    | 172.16.0.1/27       |
 
-| Túnel IPSEC | IP |
-| ----------- | -- |
+| Túnel IPSEC | IP-ADDRESS |
+| ----------- | ---------- |
 | FortiGate | 169.255.1.1/30 |
 | Palo Alto | 169.255.1.2/30 |
 
