@@ -1,10 +1,10 @@
 ### Levantamento de requisitos para automação de uma VPN com IPSEC entre FW Fortigate e PaloAlto. 
 Tópicos principais:
 
-- Definição de parametros:
-- Identificação de Ferramentas/API:
-- Brief automação:
-- Considerações/Validações:
+- Definição de parametros;
+- Identificação de Ferramentas/API;
+- Brief automação;
+- Considerações/Validações;
 
 ### Definição VPN com IPSEC:
 Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Internet Protocol Security) para criar um túnel seguros entre dois dispositivos ou uma rede. O IPsec fornece criptografia e autenticação, garantindo que as comunicações entre os dispositivos sejam protegidas e não possam ser interceptadas. 
@@ -28,6 +28,7 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 
 | Proposta Fase 1 | Security |
 | --------------- | -------- | 
+| Ike version     |    v2 |
 | Criptografia    |   AES256       |
 | Autenticacao    |   SHA256       |
 | Lifetime        |   28800      |
