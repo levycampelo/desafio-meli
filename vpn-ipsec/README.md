@@ -1,4 +1,4 @@
-### Levantamento de requisitos para automação de uma VPN com IPSEC entre FW Fortigate e Palo Alto. 
+### Levantamento de requisitos para automação de uma VPN com IPSEC entre FW Fortigate e PaloAlto. 
 Tópicos principais:
 
 - Definição de parametros:
@@ -19,37 +19,37 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 | Redes Locais | IP-ADDRESS |
 | ------------ | ---------- |
 | FortiGate    | 192.168.100.1/26       |
-| Palo Alto    | 172.16.0.1/27       |
+| PaloAlto    | 172.16.0.1/27       |
 
 | Túnel IPSEC | IP-ADDRESS |
 | ----------- | ---------- |
 | FortiGate | 169.255.1.1/30 |
-| Palo Alto | 169.255.1.2/30 |
+| PaloAlto | 169.255.1.2/30 |
 
 | Proposta Fase 1 | Security |
 | --------------- | -------- | 
-| Criptografia    |          |
-| Autenticacao    |          |
-| Lifetime        |          |
+| Criptografia    |   AES256       |
+| Autenticacao    |   SHA256       |
+| Lifetime        |   28800      |
 
 | Proposta Fase 2 | Security | 
 | --------------- | -------- |
-| Criptografia      |        |
-| Autenticacao      |        |
-| Lifetime          |        |
-| Protocol          |        |
+| Criptografia      |  AES256       |
+| Autenticacao      |  SHA256      |
+| Lifetime          |   3600     |
+| Protocol          |   ESP     |
 
 ### Ferramentas/APIs:
 
 | Dispositivo | Interfaces | Ferramentas | 
 | ----------- | ---------- | ----------- |
 | FortiGate   | API REST, SSH/CLI | request, paramiko |
-| Palo Alto   | API REST, SSH/CLI | paramiko, ansible, terraform |
+| PaloAlto   | API REST, SSH/CLI | paramiko, ansible, terraform |
 
 ### Possibilidade de gerenciamento centralizado:
 
 - FortiManager
-- Panorama (Palo Alto)
+- Panorama (PaloAlto)
 
 ### Passos lógicos para automação:
 
@@ -62,7 +62,7 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 - Mapear a necessidade de roteamento estático ou dinamico entre as redes de diferentes regiões via tunel;
 
 - Criar rotina de validações (ping, tunnel status e logs) via check do zabbix;
-> Validar o status ike-sa e ipsec-sa
+> Validar o status do tunel = ike-sa e ipsec-sa
 - Criar dashboard para monitoramento de latencia, status do tunel e logs.
 
 ### Check após configurações:
