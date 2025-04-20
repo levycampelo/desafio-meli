@@ -31,12 +31,14 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 | Criptografia    |   AES256       |
 | Autenticacao    |   SHA256       |
 | Lifetime        |   28800      |
+| DH Group        |    14  |
 
 | Proposta Fase 2 | Security | 
 | --------------- | -------- |
 | Criptografia      |  AES256       |
 | Autenticacao      |  SHA256      |
 | Lifetime          |   3600     |
+| DH Group          |    14      |
 | Protocol          |   ESP     |
 
 ### Ferramentas/APIs:
