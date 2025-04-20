@@ -41,7 +41,7 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 | DH Group          |    14      |
 | Protocol          |   ESP     |
 
-Estudar a possibilidade de implementar Criptografia SHA384 e DH group 19 para aumentar a segurança.
+Estudar a possibilidade de implementar criptografia SHA384 e DH group 19 para aumentar o nível de segurança.
 
 
 ### Ferramentas/APIs:
@@ -72,7 +72,7 @@ Estudar a possibilidade de implementar Criptografia SHA384 e DH group 19 para au
 
 ### Check após configurações:
 
-FortiGate = get vpn ipsec tunnel, diagnose vpn tunnel
+FortiGate = get vpn ipsec tunnel, diagnose vpn tunnel<br>
 PaloAlto = show vpn ike-sa, show vpn ipsec-sa
 
 
