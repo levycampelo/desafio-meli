@@ -1,4 +1,5 @@
-### Plano para automação de uma VPN com IPSEC entre FW Fortigate e Palo Alto. Topicos principais:
+### Levantamento de requisitos para automação de uma VPN com IPSEC entre FW Fortigate e Palo Alto. 
+Topicos principais:
 
 - Definição de parametros:
 - Identificação de Ferramentas/API:
@@ -12,18 +13,18 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 
 | Endereços WAN dos FW | IP-ADDRESS | 
 | -------------------- | ---------- |
-| FortiGate            | xxx        |
-| Palo Alto            | xxx        |
+| FortiGate            | 200.210.199.1/30        |
+| Palo Alto            | 189.212.0.1./30        |
 
 | Redes Locais | IP-ADDRESS |
 | ------------ | ---------- |
-| FortiGate    | xxxx       |
-| Palo Alto    | xxxx       |
+| FortiGate    | 192.168.100.1/26       |
+| Palo Alto    | 172.16.0.1/27       |
 
 | Túnel IPSEC | IP |
 | ----------- | -- |
-| FortiGate | xxx |
-| Palo Alto | xxx |
+| FortiGate | 169.255.1.1/30 |
+| Palo Alto | 169.255.1.2/30 |
 
 | Proposta Fase 1 | Security |
 | --------------- | -------- | 
@@ -45,9 +46,22 @@ Uma VPN IPsec é uma Rede Virtual Privada que utiliza o protocolo IPsec (Interne
 | FortiGate   | API REST, SSH/CLI | request, paramiko |
 | Palo Alto   | API REST, SSH/CLI | paramiko, ansible, terraform |
 
-Possibilidade de gerenciamento centralizado:
+### Possibilidade de gerenciamento centralizado:
 
 - FortiManager
 - Panorama (Palo Alto)
+
+### Passos lógicos para automação:
+
+- Mapear todas as conectividades físicas;
+- Mapear todas as conexões lógicas;
+- Mapear todos os endereços WAN, LAN, interfaces e IP do Túnel IPSEC;
+- Mapear conexões de API e Firewall necessárias para atingir as redes locais;
+- Mapear as politicas necessárias para permitir o trafego entre as redes e sub-redes;
+- Mapear a necessidade de criar politicas para liberar e negar trafego entre as redes;
+- Mapear a necessidade de roteamento estático ou dinamico entre as redes de diferentes regiões via tunel;
+
+- Criar rotina de validações (ping, tunnel status e logs);
+- Criar dashboard para monitoramento de latencia, status do tunel e logs.
 
 
